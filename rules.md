@@ -15,20 +15,16 @@
 * GET /repos/1/commits - returns list of commits
 * GET /repos/1/commits/835f0a634b9536a15e95 - returns 1 exact commit
 * POST /repos/1/commits - creates new commit
-* PUT /repos/1/commits/835f0a634b9536a15e95 - fully updates commit (uh, dat examples, dude :confused:)
+* PUT /repos/1/commits/835f0a634b9536a15e95 - fully updates commit (uh, dat example, dude :confused:)
 * PATCH /repos/1/commits/835f0a634b9536a15e95 - partially updates commit
 * DELETE /repos/1/commits/835f0a634b9536a15e95 - delete commit
-
-[subresource issue](https://github.com/IgorPerikov/rest-conventions/issues/1)
 
 
 ## Non-crud actions:
 
 problem: specify some action which will be easy for consumer and sctricted by our implementation details, which are not preferred to be known by consumer (not some PATCH), for example subscribing on someone's blog
 
-Glossary:
-
-* subscription - author, whos notifications you are listening for
+Glossary: 'subscription' is an author, whos notifications you are listening for
 
 
 ### Option 1: rework and handle as subresources: 
