@@ -5,5 +5,5 @@ I need a documentation where I will be able to find answer for any question abou
 
 ## Content:
 
-* [crud api rules](https://github.com/IgorPerikov/rest-conventions/blob/master/crud.md)
+* [api_building rules](https://github.com/IgorPerikov/rest-conventions/blob/master/rules.md)
 * [tips](https://github.com/IgorPerikov/rest-conventions/blob/master/tips.md)
