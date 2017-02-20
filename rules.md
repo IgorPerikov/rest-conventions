@@ -1,4 +1,4 @@
-# CRUD
+# Rules
 
 ## Resource:
 
@@ -62,3 +62,10 @@ where unary minus means descending order, ascending otherwise.
 ## Pagination:
 
 * GET /users?page=4&size=20
+
+## So-called controller for actions:
+
+Use verb or verb phrase, e.g.:
+
+* POST /server/shutdown
+* POST /reminder/123/resend
