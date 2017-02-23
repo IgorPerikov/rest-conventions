@@ -83,3 +83,8 @@ use request body for passing resource content
 ## Search:
 
 * GET /search/plural_resource_name?q=query&sort=my_field&order=desc|asc
+
+
+## Batch deletings:
+
+* DELETE /user/1/subresourcres?id=1&id=2&id=3&id=4
