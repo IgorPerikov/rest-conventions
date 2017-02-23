@@ -5,5 +5,6 @@ I need a documentation where I will be able to find answer for any question abou
 
 ## Content:
 
-* [api_building rules](https://github.com/IgorPerikov/rest-conventions/blob/master/rules.md)
+* [common](https://github.com/IgorPerikov/rest-design-notes/blob/master/common-cases.md)
+* [advanced](https://github.com/IgorPerikov/rest-design-notes/blob/master/advanced-cases.md)
 * [tips](https://github.com/IgorPerikov/rest-conventions/blob/master/tips.md)
