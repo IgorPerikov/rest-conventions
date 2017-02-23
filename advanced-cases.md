@@ -4,6 +4,8 @@
 
 problem: specify some action which will be easy for consumer and sctricted by our implementation details, which are not preferred to be known by consumer (not some PATCH), for example subscribing on someone's blog
 
+tip: return 202 to indicate that long async action was started
+
 ### Option 1: rework and handle as subresources: 
 
 * GET /users/1/subscriptions - returns all user subscriptions
@@ -21,40 +23,36 @@ problem: specify some action which will be easy for consumer and sctricted by ou
 * PATCH /subscriptions/1
 * DELETE /subscriptions/1
 
-### Option 3: if u cant convert to a noun:
-
-* POST /broadcast/1/postpone - general case
-* PUT /postponed/1 - in case if you internally/externally handle this as sub-collection (in other parts of api or common-known queries)
-
-## Sorting:
-
-* GET /users?sort=-age,salary
-where unary minus means descending order, ascending otherwise.
-
-## Common-known queries:
-
-* GET /users/oldest
-* GET /users/poorest-parents
-
-## So-called controller for actions:
-
-Use verb or verb phrase, e.g.:
+### Option 3: if u cant convert to a noun, use verb or verb phrase:
 
 * POST /server/shutdown
 * POST /reminder/123/resend
 
-Long actions: return 202 to indicate that async action was started
+* GET /resource/id/action - get status of action
 
-* GET /resource/1/subresource/import - get status of import
-* PUT /resource/1/subresource/import - start import, **i don't like this github example, I guess it must be POST**
+#### POST or PUT?
 
-## Passing parameters:
+* POST /broadcast/1/postpone - general case
+* PUT /postponed/1 - in case if you internally/externally handle this as sub-collection (in other parts of api or common-known queries)
+
+## Tips on passing parameters:
 
 If you usually treat some parameter as resource (e.g. user or article), then always use it as path variable, not query param:
 
 use `/organizations/1/blocks/{userId}` instead of `/organizations/1/blocks?id={userId}`
 
 use request body for passing resource content
+
+
+## Common-known queries:
+
+* GET /users/oldest
+* GET /users/poorest-parents
+
+## Multi-field sorting:
+
+* GET /users?sort=-age,salary
+where unary minus means descending order, ascending otherwise.
 
 ## Search:
 
