@@ -24,9 +24,6 @@
 
 problem: specify some action which will be easy for consumer and sctricted by our implementation details, which are not preferred to be known by consumer (not some PATCH), for example subscribing on someone's blog
 
-Glossary: 'subscription' is an author, whos notifications you are listening for
-
-
 ### Option 1: rework and handle as subresources: 
 
 * GET /users/1/subscriptions - returns all user subscriptions
@@ -69,3 +66,20 @@ Use verb or verb phrase, e.g.:
 
 * POST /server/shutdown
 * POST /reminder/123/resend
+
+Long actions: return 202 to indicate that async action was started
+
+* GET /resource/1/subresource/import - get status of import
+* PUT /resource/1/subresource/import - start import, **i don't like this github example, I guess it must be POST**
+
+## Passing parameters:
+
+If you usually treat some parameter as resource (e.g. user or article), then always use it as path variable, not query param:
+
+use `/organizations/1/blocks/{userId}` instead of `/organizations/1/blocks?id={userId}`
+
+use request body for passing resource content
+
+## Search:
+
+* GET /search/plural_resource_name?q=query&sort=my_field&order=desc|asc
