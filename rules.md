@@ -9,7 +9,6 @@
 * PATCH /books/1 - partially updates book
 * DELETE /books/1 - deletes book
 
-
 ## Subresource:
 
 * GET /repos/1/commits - returns list of commits
@@ -40,6 +39,11 @@ problem: specify some action which will be easy for consumer and sctricted by ou
 * PUT /subscriptions/1
 * PATCH /subscriptions/1
 * DELETE /subscriptions/1
+
+### Option 3: if u cant convert to a noun:
+
+* POST /broadcast/1/postpone - general case
+* PUT /postponed/1 - in case if you internally/externally handle this as sub-collection (in other parts of api or common-known queries)
 
 
 ## Filtering:
@@ -83,7 +87,6 @@ use request body for passing resource content
 ## Search:
 
 * GET /search/plural_resource_name?q=query&sort=my_field&order=desc|asc
-
 
 ## Batch deletings:
 
