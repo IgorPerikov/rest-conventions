@@ -1,23 +1,4 @@
-# Rules
-
-## Resource:
-
-* GET /books - returns list of books (with offset and limit as query params)
-* GET /books/1 - returns book
-* POST /books - creates a new book
-* PUT /books/1 - fully updates book
-* PATCH /books/1 - partially updates book
-* DELETE /books/1 - deletes book
-
-## Subresource:
-
-* GET /repos/1/commits - returns list of commits
-* GET /repos/1/commits/835f0a634b9536a15e95 - returns 1 exact commit
-* POST /repos/1/commits - creates new commit
-* PUT /repos/1/commits/835f0a634b9536a15e95 - fully updates commit (uh, dat example, dude :confused:)
-* PATCH /repos/1/commits/835f0a634b9536a15e95 - partially updates commit
-* DELETE /repos/1/commits/835f0a634b9536a15e95 - delete commit
-
+# Advanced cases
 
 ## Non-crud actions:
 
@@ -45,11 +26,6 @@ problem: specify some action which will be easy for consumer and sctricted by ou
 * POST /broadcast/1/postpone - general case
 * PUT /postponed/1 - in case if you internally/externally handle this as sub-collection (in other parts of api or common-known queries)
 
-
-## Filtering:
-
-* GET /users?filed1=value1&field2=value2
-
 ## Sorting:
 
 * GET /users?sort=-age,salary
@@ -59,10 +35,6 @@ where unary minus means descending order, ascending otherwise.
 
 * GET /users/oldest
 * GET /users/poorest-parents
-
-## Pagination:
-
-* GET /users?page=4&size=20
 
 ## So-called controller for actions:
 
