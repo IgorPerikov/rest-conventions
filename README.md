@@ -7,7 +7,8 @@ I need a documentation where I will be able to find answer for any question abou
 
 * My entity contains a collection, how do I update it content? 
 * How do I represent verb action in my api? 
-* TBD
+* How do I change exactly one field of entity?
+* How do I make a batch request? 
 
 ## Content:
 
