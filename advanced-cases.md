@@ -23,7 +23,7 @@ tip: return 202 to indicate that long async action was started
 * PATCH /subscriptions/1
 * DELETE /subscriptions/1
 
-### Option 3: if u cant convert to a noun, use verb or verb phrase:
+### Option 3: if it's not possible to convert verb to noun, use verb or verb phrase:
 
 * POST /server/shutdown
 * POST /reminder/123/resend
@@ -60,4 +60,6 @@ where unary minus means descending order, ascending otherwise.
 
 ## Batch deletings:
 
+* DELETE /user/1/subresourcres?ids=1,2,3,4
+or
 * DELETE /user/1/subresourcres?id=1&id=2&id=3&id=4
